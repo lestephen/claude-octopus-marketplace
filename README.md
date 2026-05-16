@@ -36,6 +36,13 @@ with local patches.
    from 0, which under `set -eo pipefail` killed `do_doctor` before
    any output was rendered. Same `|| true` guard already used on the
    symmetric counter at line 259.
+8. **`fix(doctor)`** — `doctor_check_agents` no longer invokes a
+   `claude agents list` subcommand that never existed (CC v2.1.139+
+   `claude agents` opens the Agent View TUI for managing background
+   sessions, unrelated to plugin-declared subagents). Replaced with
+   two stable checks: `enabledPlugins` parse for `octo@*` entries
+   and `claude plugin validate` schema check. Directly answers "will
+   my agents load?" with correct interfaces.
 
 ## Install
 
