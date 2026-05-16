@@ -1,0 +1,42 @@
+{
+  "name": "lestephen-octo",
+  "owner": {
+    "name": "lestephen",
+    "url": "https://github.com/lestephen"
+  },
+  "metadata": {
+    "description": "Override marketplace pinning octo to lestephen/claude-octopus fork with petrics patches.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "octo",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/lestephen/claude-octopus.git",
+        "ref": "v9.38.0-petrics.2"
+      },
+      "description": "v9.38.0-petrics.2 — Multi-LLM orchestration for Claude Code. Fork of nyldn/claude-octopus@v9.38.0 with patches: OCTOPUS_CODEX_APPROVAL env var, .md command cd-fix preserving user PWD, orchestrate.sh PROJECT_ROOT fallback, gemini --include-directories.",
+      "version": "9.38.0-petrics.2",
+      "author": {
+        "name": "lestephen (fork) / nyldn (upstream)",
+        "url": "https://github.com/lestephen/claude-octopus"
+      },
+      "repository": "https://github.com/lestephen/claude-octopus",
+      "homepage": "https://github.com/lestephen/claude-octopus",
+      "license": "MIT",
+      "keywords": [
+        "multi-llm",
+        "multi-agent",
+        "orchestration",
+        "claude-code-plugin",
+        "codex",
+        "gemini",
+        "code-review",
+        "automation",
+        "fork"
+      ],
+      "category": "orchestration"
+    }
+  ]
+}
