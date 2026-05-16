@@ -14,10 +14,10 @@
       "source": {
         "source": "url",
         "url": "https://github.com/lestephen/claude-octopus.git",
-        "ref": "v9.38.0-lestephen.8"
+        "ref": "v9.38.0-lestephen.9"
       },
-      "description": "v9.38.0-lestephen.8 — Multi-LLM orchestration for Claude Code. Fork of nyldn/claude-octopus@v9.38.0 with patches: OCTOPUS_CODEX_APPROVAL env var, .md command cd-fix preserving user PWD, orchestrate.sh PROJECT_ROOT fallback, gemini --include-directories, /octo:doctor self-loop guard, doctor skill-dir check, doctor recurrence-check silent-exit fix, doctor agents-cli replaced with enabledPlugins + plugin validate, first-run hint recognizes codex/gemini alternate auth, dead SUPPORTS_AGENTS_CLI flag removed, checkpoint-streaming tangle subtasks, checkpoint detector hotfix (scan running streams, anchor markers).",
-      "version": "9.38.0-lestephen.8",
+      "description": "v9.38.0-lestephen.9 — Multi-LLM orchestration for Claude Code. Fork of nyldn/claude-octopus@v9.38.0 with patches: OCTOPUS_CODEX_APPROVAL env var, .md command cd-fix preserving user PWD, orchestrate.sh PROJECT_ROOT fallback, gemini --include-directories, /octo:doctor self-loop guard, doctor skill-dir check, doctor recurrence-check silent-exit fix, doctor agents-cli replaced with enabledPlugins + plugin validate, first-run hint recognizes codex/gemini alternate auth, dead SUPPORTS_AGENTS_CLI flag removed, checkpoint-streaming tangle subtasks, checkpoint detector hotfix, tangle process-tree cleanup on interrupt.",
+      "version": "9.38.0-lestephen.9",
       "author": {
         "name": "lestephen (fork) / nyldn (upstream)",
         "url": "https://github.com/lestephen/claude-octopus"

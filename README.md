@@ -71,6 +71,14 @@ with local patches.
     state_file)` signature that scans all relevant streams, and
     anchoring `grep -E '^### CHECKPOINT:'` to start-of-line so prompt
     examples (indented) cannot match.
+13. **`fix(tangle)`** — kill subprocess tree on EXIT/SIGTERM/SIGINT.
+    `TaskStop` was killing only the `orchestrate.sh` wrapper bash, not
+    the spawned codex/gemini subtree (4+ levels deep). Orphaned subtrees
+    kept running for ~45 minutes after interruption, racing subsequent
+    invocations and corrupting working-tree state. Added a recursive
+    descendant walker (`pgrep -P`) and EXIT/SIGTERM/SIGINT traps in
+    `tangle_develop` that kill the entire subprocess tree on
+    interruption.
 
 ## Install
 
