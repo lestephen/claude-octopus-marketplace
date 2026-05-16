@@ -52,6 +52,16 @@ with local patches.
 10. **`chore`** — remove dead `SUPPORTS_AGENTS_CLI` flag and its
     incorrect `# claude agents list command` comment. Dead since
     patch #8 replaced the bogus check.
+11. **`feat(tangle)`** — checkpoint-streaming tangle subtasks. Each
+    subtask is wrapped with a mandatory protocol forcing micro-step
+    `apply_patch` + `### CHECKPOINT:` markers. The wait loop kills on
+    idleness (no new checkpoint in N seconds) instead of total
+    elapsed; killed-with-checkpoints subtasks get a RESUME re-spawn
+    that picks up from the last completed checkpoint. Timeout now
+    bounds *progress loss* instead of *total scope*. Toggle off with
+    `OCTOPUS_TANGLE_CHECKPOINTS=false`. Addresses the v9.38.0-lestephen.6
+    failure mode where 10 minutes of Codex generation was lost because
+    no `apply_patch` was reached before timeout.
 
 ## Install
 
