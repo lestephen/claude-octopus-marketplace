@@ -31,6 +31,11 @@ with local patches.
    instead of only regular files. Eliminates 51 false-positive
    "Skill file missing" failures (skills are dirs containing
    `SKILL.md`, not single files).
+7. **`fix(doctor)`** — `doctor_check_recurrence` no longer aborts
+   silently. `((recent_failures++))` returns exit 1 when incremented
+   from 0, which under `set -eo pipefail` killed `do_doctor` before
+   any output was rendered. Same `|| true` guard already used on the
+   symmetric counter at line 259.
 
 ## Install
 
