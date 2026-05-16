@@ -62,6 +62,15 @@ with local patches.
     `OCTOPUS_TANGLE_CHECKPOINTS=false`. Addresses the v9.38.0-lestephen.6
     failure mode where 10 minutes of Codex generation was lost because
     no `apply_patch` was reached before timeout.
+12. **`fix(tangle)`** — hotfix for checkpoint detector bugs found live:
+    (a) counter was scanning the empty-until-done assembled `.md` file
+    instead of the running `.tmp-$task_id.err` stream that Codex
+    actually writes to; (b) `grep -F` unanchored match counted the
+    indented example markers in the protocol header as completed
+    checkpoints. Fixed by switching counter to a `(results_dir, task_id,
+    state_file)` signature that scans all relevant streams, and
+    anchoring `grep -E '^### CHECKPOINT:'` to start-of-line so prompt
+    examples (indented) cannot match.
 
 ## Install
 
