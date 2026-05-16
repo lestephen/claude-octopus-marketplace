@@ -43,6 +43,15 @@ with local patches.
    two stable checks: `enabledPlugins` parse for `octo@*` entries
    and `claude plugin validate` schema check. Directly answers "will
    my agents load?" with correct interfaces.
+9. **`fix(setup)`** — `check_first_run` now recognizes
+   `~/.codex/auth.json` and `~/.gemini/oauth_creds.json` as valid
+   auth. Eliminates the persistent "🐙 First time?" hint that
+   previously fired on every `orchestrate.sh` invocation for users
+   authenticated via `codex login` or Gemini OAuth (the most common
+   setup methods). Mirrors doctor's existing auth-detection logic.
+10. **`chore`** — remove dead `SUPPORTS_AGENTS_CLI` flag and its
+    incorrect `# claude agents list command` comment. Dead since
+    patch #8 replaced the bogus check.
 
 ## Install
 
