@@ -23,6 +23,14 @@ with local patches.
 4. **`feat(gemini)`** — `scripts/lib/dispatch.sh` appends
    `--include-directories ${PROJECT_ROOT}` to the gemini flag set in
    headless mode, guaranteeing project access regardless of cwd.
+5. **`fix(commands)`** — `/octo:doctor` resolver no longer creates a
+   self-referential `~/.claude-octopus/plugin` symlink when invoked from
+   a working install. Now resolves canonical paths via `readlink -f`
+   and skips `ln -sfn` if source and target already match.
+6. **`fix(doctor)`** — `doctor_check_skills` accepts skill directories
+   instead of only regular files. Eliminates 51 false-positive
+   "Skill file missing" failures (skills are dirs containing
+   `SKILL.md`, not single files).
 
 ## Install
 
@@ -39,9 +47,9 @@ When upstream v9.38.1+ ships:
 ```bash
 cd ~/source/claude-octopus
 git fetch upstream
-git rebase upstream/main petrics-patches
-git tag v9.38.1-petrics.1
-git push origin petrics-patches v9.38.1-petrics.1
+git rebase upstream/main lestephen-patches
+git tag v9.38.1-lestephen.1
+git push origin lestephen-patches v9.38.1-lestephen.1
 ```
 
 Then bump the `version` and `ref` fields in `marketplace.json` here

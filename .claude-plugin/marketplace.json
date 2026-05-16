@@ -5,7 +5,7 @@
     "url": "https://github.com/lestephen"
   },
   "metadata": {
-    "description": "Override marketplace pinning octo to lestephen/claude-octopus fork with petrics patches.",
+    "description": "Override marketplace pinning octo to the lestephen/claude-octopus fork with personal patches.",
     "version": "1.0.0"
   },
   "plugins": [
@@ -14,10 +14,10 @@
       "source": {
         "source": "url",
         "url": "https://github.com/lestephen/claude-octopus.git",
-        "ref": "v9.38.0-petrics.2"
+        "ref": "v9.38.0-lestephen.3"
       },
-      "description": "v9.38.0-petrics.2 — Multi-LLM orchestration for Claude Code. Fork of nyldn/claude-octopus@v9.38.0 with patches: OCTOPUS_CODEX_APPROVAL env var, .md command cd-fix preserving user PWD, orchestrate.sh PROJECT_ROOT fallback, gemini --include-directories.",
-      "version": "9.38.0-petrics.2",
+      "description": "v9.38.0-lestephen.3 — Multi-LLM orchestration for Claude Code. Fork of nyldn/claude-octopus@v9.38.0 with patches: OCTOPUS_CODEX_APPROVAL env var, .md command cd-fix preserving user PWD, orchestrate.sh PROJECT_ROOT fallback, gemini --include-directories, /octo:doctor self-loop guard, doctor skill-dir check.",
+      "version": "9.38.0-lestephen.3",
       "author": {
         "name": "lestephen (fork) / nyldn (upstream)",
         "url": "https://github.com/lestephen/claude-octopus"
