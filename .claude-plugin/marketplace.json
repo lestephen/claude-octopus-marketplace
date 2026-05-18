@@ -14,10 +14,10 @@
       "source": {
         "source": "url",
         "url": "https://github.com/lestephen/claude-octopus.git",
-        "ref": "v9.38.0-lestephen.39"
+        "ref": "v9.38.0-lestephen.40"
       },
-      "description": "9.38.0-lestephen.39 — Multi-LLM orchestration for Claude Code. Fork of nyldn/claude-octopus@v9.38.0 with lestephen patches. See per-patch index at https://github.com/lestephen/claude-octopus/blob/v9.38.0-lestephen.39/FORK_PATCHES.md.",
-      "version": "9.38.0-lestephen.39",
+      "description": "9.38.0-lestephen.40 — Multi-LLM orchestration for Claude Code. Fork of nyldn/claude-octopus@v9.38.0 with lestephen patches. See per-patch index at https://github.com/lestephen/claude-octopus/blob/v9.38.0-lestephen.40/FORK_PATCHES.md.",
+      "version": "9.38.0-lestephen.40",
       "author": {
         "name": "lestephen (fork) / nyldn (upstream)",
         "url": "https://github.com/lestephen/claude-octopus"
